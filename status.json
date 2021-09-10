@@ -1,0 +1,7 @@
+{
+  "bem": ["Que bom!", "Você deve ter dormido muito bem, então!", "Arrasa!", "Você deve estar fazendo algo muito bem!"],
+
+  "mal": ["Hmm, eu posso te ajudar?", "Quer conversar?", "Você quer falar sobre?"],
+  
+  "confuse": ["É... nem sempre o estado de espírito é algo claro.", "Eu ando bem pensativa tambem.", "A simplicidade é uma busca complexa, não?"]
+}
