@@ -8,7 +8,7 @@ print(file.read())
 with open("status.json") as jsonFile:
   json = json.load(jsonFile)
 
-def Psichological_Approach():
+def Psychological_Approach():
   user_resp = input()
   possible_resps = ["sim", "quero", "uhum", "me ajude", "não", "não quero"]
   if user_resp in possible_resps and "não" not in user_resp:
@@ -29,7 +29,7 @@ for resp in json:
     severina_resp = json[resp][randint(0, len(json[resp]) - 1)]
     print(severina_resp)
     if "?" in severina_resp:
-      Psichological_Approach()
+      Psychological_Approach()
        
      
 #a = randint(0, 3)
