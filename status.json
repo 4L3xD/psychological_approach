@@ -3,5 +3,7 @@
 
   "mal": ["Hmm, eu posso te ajudar?", "Quer conversar?", "Você quer falar sobre?"],
   
-  "confuse": ["É... nem sempre o estado de espírito é algo claro.", "Eu ando bem pensativa tambem.", "A simplicidade é uma busca complexa, não?"]
+  "confuse": ["É... nem sempre o estado de espírito é algo claro.", "Eu ando bem pensativa tambem.", "A simplicidade é uma busca complexa, não?"],
+
+  "mais ou menos": ["Hmmm, o que você está sentindo?", "Por que você está assim?", "Você não é perfeito, mas ninguém é."]
 }
