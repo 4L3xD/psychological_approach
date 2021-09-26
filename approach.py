@@ -11,17 +11,11 @@ class Approach():
         if answer in user_answer:
           return answer
 
-    def Psychological_Approach(self, name):
-      user_resp = input()
-      
-      if "não" not in self.Possible_Answer(user_resp):
-        print(f"Certo, {name}... vamos entender o que está acontecendo.")
-      else:
+    def Game(self, name):
         print(f"Tudo bem, {name}. A gente não precisa falar disso.")
         showThing = input("Ei, posso te mostrar uma coisa? ")
         
         platform = sys.platform
-        
         # Abre uma janela no navegador com um jogo
         if "não" not in self.Possible_Answer(showThing):
           print("É um dos meus jogos favoritos! Vamos lá!")
@@ -33,3 +27,13 @@ class Approach():
               sp.Popen("https://brunolemos.github.io/trust/")
             except FileNotFoundError:
               sp.Popen(['xdg-open', "https://brunolemos.github.io/trust/"])
+
+    def Psychological_Approach(self, name):
+      user_answer = input()
+      
+      if "não" not in self.Possible_Answer(user_answer):
+        print(f"Certo, {name}... vamos entender o que está acontecendo.")
+        what_is_happening = input("O que você está sentindo? ")
+
+      else:
+        self.Game(name)
