@@ -1,32 +1,20 @@
 import telepot
 import json
-from pprint import pprint
-from telepot.loop import MessageLoop
-import time
+from severina import Severina
 
-with open("token.json") as jsonFile:
-  token = json.load(jsonFile)
-bot = telepot.Bot(token)
+with open('token.json') as jsonFile:
+    token = json.load(jsonFile)
+telegram = telepot.Bot(token)
+bot = Severina("Severina_Bot")
 
-#print(bot.getMe())
-#response = bot.getUpdates()
-#print(response)
-""" 
-def handle(msg):
-    pprint(msg)
+def receiveMsg(msg):
+    phrase = bot.listen(phrase=msg['text'])
+    response = bot.think(phrase)
+    bot.speak(response)
+    msgType, chatType, chatID = telepot.glance(msg)
+    telegram.sendMessage(chatID, response)
 
-MessageLoop(bot, handle).run_as_thread()
-bot.sendMessage('Here is a ID number', 'Hey!')
-"""
-def handle(msg):
-    content_type, chat_type, chat_id = telepot.glance(msg)
-    print(content_type, chat_type, chat_id)
+telegram.message_loop(receiveMsg)
 
-    if content_type == 'text':
-        bot.sendMessage(chat_id, msg['text'])
-
-MessageLoop(bot, handle).run_as_thread()
-print('Listening ...')
-
-while 1:
-    time.sleep(10)
+while True:
+    pass
