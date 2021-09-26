@@ -1,11 +1,13 @@
+# Importante!
+# Use as referências dos commits anteriores para construir a lógica, pois o código mais recente é menos intuitivo e mais abstrato ainda que seja mais eficiente!
+
 import json
 #from time import sleep
 from random import randint
 from approach import Approach
 
 approach = Approach()
-#a.Testando(nome)
- 
+
 file = open("boas_vindas.txt", "r")
 print(file.read())
 
@@ -19,14 +21,14 @@ print(f"{nome}, legal te conhecer!")
 
 status = input("Eu sou Severina.\nComo você está? ")
 for resp in json:
-  if status == resp:
+  if resp in status:
     #print(len(json[resp]))
     severina_resp = json[ resp ][ randint(0, len(json[resp]) - 1) ]
     print(severina_resp)
     if "?" in severina_resp:
       approach.Psychological_Approach(nome)
-       
-     
-#a = randint(0, 3)
-#print(json['bem'][a])
+
+# Exemplos didáticos:
+##  a = randint(0, 3)
+##  print(json['bem'][a])
 
